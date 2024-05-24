@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz dos Frescos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .question {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .options {
+      list-style-type: none;
+      padding: 0;
+    }
+    .option {
+      margin-bottom: 10px;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dmouramkt</h1>
+  <h2 class="question">Quiz dos Frescos</h2>
+  <p>Quem é o mais fresco do IF?</p>
+  <ul class="options">
+    <li class="option" onclick="respostaErrada(this)">Vinicius</li>
+    <li class="option" onclick="respostaErrada(this)">Gabriel</li>
+    <li class="option" onclick="respostaCorreta(this)">Marçal</li>
+    <li class="option" onclick="respostaErrada(this)">Pedro</li>
+  </ul>
+
+  <script>
+    function respostaCorreta(element) {
+      element.classList.add('correct');
+      alert('Resposta Correta! Marçal é o mais fresco do IF.');
+    }
+
+    function respostaErrada(element) {
+      element.classList.add('incorrect');
+      alert('Resposta Incorreta! Tente novamente.');
+    }
+  </script>
+</body>
+</html>
